@@ -1,6 +1,7 @@
 // IMPORT MODULES
 const express = require("express");
 const router = express.Router();
+const multer = require("../config/multer");
 // IMPORT PATH FILE
 const ctrlPath = require("../controllers/users");
 // DEFINITION ROUTES

@@ -1,5 +1,5 @@
-const { DataTypes } = require("sequelize");
 const sequelize = require("../config/database");
+const { DataTypes } = require("sequelize");
 
 const USERS = sequelize.define("USERS", {
   userId: {
@@ -7,55 +7,60 @@ const USERS = sequelize.define("USERS", {
     autoIncrement: true,
     primaryKey: true,
     unique: true,
-    allowNull: false
+    allowNull: false,
   },
   email: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
   },
   password: {
     type: DataTypes.STRING,
-    allowNull:false
+    allowNull: false,
   },
   firstName: {
     type: DataTypes.STRING,
-    allowNull:false
+    allowNull: false,
   },
   lastName: {
     type: DataTypes.STRING,
-    allowNull:false
+    allowNull: false,
   },
   genre: {
     type: DataTypes.STRING,
-    allowNull:true
+    allowNull: true,
   },
   pseudo: {
     type: DataTypes.STRING,
-    allowNull:false
+    allowNull: false,
   },
   avatar: {
     type: DataTypes.STRING,
-    allowNull:true,
-    defaultValue:"defaultPicture.png"
+    allowNull: true,
+    defaultValue: "defaultPicture.png",
   },
   fonction: {
     type: DataTypes.STRING,
-    allowNull:false,
-    defaultValue: "USER"
+    allowNull: false,
+    defaultValue: "USER",
   },
-  birthday:{
+  birthday: {
     type: DataTypes.DATE,
-    allowNull:false,
+    allowNull: false,
   },
   followers: {
     type: DataTypes.STRING,
-    allowNull:true,
-    defaultValue: ""
+    allowNull: true,
+    defaultValue: "",
   },
   following: {
     type: DataTypes.STRING,
-    allowNull:true,
-    defaultValue: ""
+    allowNull: true,
+    defaultValue: "",
+  },
+  like: {
+    type: DataTypes.STRING,
+    allowNull: true,
+    defaultValue: "",
   },
 });
 
